@@ -1,0 +1,62 @@
+11/12/2019
+Usuário: 14.525.684/0001-50 - NFS-e- NOTA CARIOCA - Prefeitura da Cidade do Rio de Janeiro
+Número da Nota
+00008539
+Data e Hora de Emissão
+06/11/2019 15:56:49
+Código de Verificação
+PMRB-7KFR
+PREFEITURA DA CIDADE DO RIO DE JANEIRO
+SECRETARIA MUNICIPAL DE FAZENDA
+NOTA FISCAL DE SERVIÇOS ELETRÔNICA - NFS-e
+- NOTA CARIOCA -
+20191211 0253163819911 4525684000150
+PRESTADOR DE SERVIÇOS
+Inscrição Estadual: 75724837
+CPF/CNPJ: 02.581.638/0001-99 Inscrição Municipal: 0.235.260-5
+Nome/Razão Social: A2 MOTORS SERVICOS AUTOMOTIVOS LTDA-EPP
+Nome Fantasia: ESTAÇÃO DO CARRO
+Tel.: 24132955
+Endereço: RUA ARTUR RIOS 1463 - CAMPO GRANDE - CEP: 23013-471
+DO CARRO
+E-mail: financeiro@estacaodocarronet
+Município: RIO DE JANEIRO
+UF: RJ
+TOMADOR DE SERVIÇOS
+Inscrição Municipal: 0.532.443-2
+Inscrição Estadual: ----
+CPF/CNPJ: 14.525.684/0001-50
+Nome/Razão Social: ESSOR SEGUROS SA
+Endereço: RUA VISC DE INHAUMA 83, SAL 1801 - CENTRO
+Tel.: ----
+CEP: 20091-007
+E-mail: -----
+Município: RIO DE JANEIRO
+UF: RJ
+DISCRIMINAÇÃO DOS SERVIÇOS
+Reparos de funilaria, pintura, tapeçaria, terceiros, mecânica e acabamentos realizados para o
+veiculo ONIX QNL-OE31 // SINISTRO 1002800038080.01 // KM 66840 // ANO 17/18.
+Valor aproximado dos tributos R$ 536,41 (20, 20%) Fonte Sebrae - Lei 12741/2012.
+VALOR DA NOTA = R$ 2.655,50
+Serviço Prestado
+14.12.01 - funilaria
+Deduções (R$)
+Aiquota (%)
+Desconto Incond. (R$) Base de Cálculo (R$)
+0,00
+Valor do ISS (R$)
+Crédito p/ IPTU (R$)
+0,00
+0,00
+2.655,50
+5,00%
+132,77
+OUTRAS INFORMAÇÕES
+Esta NFS-e foi emitida com respaldo na Lei n° 5.098 de 1510/2009 e no Decreto n° 32.250 de 11/05/2010
+PROCON-RJ: Av. Rio Branco n° 25, 5° andar, tel 151: www.procon.rj.gov.br
+O ISS desta NFS-e será RETIDO pelo Tomador de Serviço que deverá recolher através de DARM, gerado pelo sistema de NFS-e.
+Documento emitido por ME ou EPP optante pelo Simples Nacional. Não gera direito a crédito fiscal de IPI.
+Esta NFS-e não gera crédito para abatimento no IPTU.
+- Valor Líquido a Pagar: R$ 2.522,73
+https://notacarioca.rio.gov.br/contribuinte/notaprint.aspx?inscricao=2352605&nf=8539& verificacao0=PMRB7KFR
+1/1
