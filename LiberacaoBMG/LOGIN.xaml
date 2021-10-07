@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LOGIN" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,696" sap2010:WorkflowViewState.IdRef="LOGIN_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="LOGIN" sap:VirtualizedContainerService.HintSize="634,652" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="expirou" />
+      <Variable x:TypeArguments="x:Boolean" Name="invalido" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 120,107.5 120,144.5</av:PointCollection>
+        <x:Double x:Key="Height">616</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID4</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">20,144.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">120,195.5 120,225.5 380,225.5 380,244.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="LoginBMG " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LoginBMG.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">280,244.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">380,295.5 380,325.5 100,325.5 100,364.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="Image Exists 'chrome.exe  BMG Consig'" Found="[invalido]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAqCAYAAADWOEvqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANvSURBVHhe7ZZNbtswEIVztqBXiS+iazgH6M4LI0DW3iUBglwgOUB3vQArDv/ejClZla1gir7Ft5BIDoePnwzf/f78DIR4hHISt1BO4hbKSdxCOYlbKCdxC+UkbqGcxC2Uk7iFchK3UE7iFpdyvg/34efw1B0jPV7CaXcfDvuXzti/yyo5u/K8PobDjyG847s1xDq7x/DVGxPSRTwfe2MGrCX9jX0XZvdYwl/0McWtMjsO+j6gbryrvrRP4XnM4ar+N8afnDfka/+QLiaLiRchZ7hK0BvIuRWL7uK/lTNdXPmVql9u/MJBiChPq6PXtHnp/WE3zpUwjRSx5tmaROxT5skcc1nS70M4vebniTryyzMMIrcey33sk/hxTP1CYb2RrgSQ2eQ+JjOdcxKs7lOytHVrX5DxuJeSU9aUWpCVeg95fQObyKmliwHmw5qgcZ6uiV91DrSOgZw5uP482Lde4kS4UqeM6TrSV6nT2w8lKjVUvXxOFKwAmU3vE3s3taS3tH8VD/c0dcsc2UP1i3v05kHWZU3Nd3u+QU5gRk4NhmIuAcdMvRR4vuBOkLKfSBqZkQfq6rPO9aUlUtg+C1bOi/vgewvs35XTroVnmC9j8hxrze23PZv955Q5WYR6OHNJSk5Z39a0ddOhnkkFPcSxJk4HEFlLW7CXG9dhL7YvLSeeX1ggZ38fyMlknM6A+8zJmX4dezliFmkMz5LWpfo4Z3tWyamkKpwdsAAHNXLKBUqdFNQyCUyoeOm1hzinidIXtfXVPU9mlZw2C9tnYaGcdV6sU/tM0nT379a1/cKzlV6eW36VqXNsxCo5U/jYfDpoCU4HHUPLB1frUrhdOWVeCfJSqHqe1IvvMcRO2OnXMvdlxuWjyeuvlzP3dY2cpcaZjO05nSfvP1FX5pQ+VMapVpnXzg9nKmsmPuItWCdnJB+uoprO4mVaoPng8n4IJ/zFwnrjuxZq/6LqM67D4G2IcmF5nlDkyajztLFpaWxfeJFNJhHm2GSp+0UWy2k+JvUu7XPYP7U1F+rKmjGr0zhW91D5wD4TucjeG4u6Xk5CNoZyErdQTuIWykncQjmJWygncQvlJG6hnMQtlJO4hXISt1BO4hbKSdxCOYlbKCdxC+UkbqGcxC2Uk7iFchK3UE7iFspJ3HL36+0jEOKPj/AH58xtH8wQYlsAAAAASUVORK5CYII=" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='BMG Consig' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ImageFound.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ImageFound>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID0">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">0,364.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">100,415.5 100,445.5 110,445.5 110,456.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ImageFound DisplayName="Image Exists  EXPIROU" Found="[expirou]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                <ui:ImageFound.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN8AAAAmCAYAAABEZE79AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATASURBVHhe7ZlNbtwwDIV7tqJXaS4yJ+g+PUB3XQQBBuguu3SRG6R36AVcURTlR4myZyadUYu8xYfYlkiKP88Okg+/X18XQsjtofgImQTFR8gkKD5CJkHxETIJio+QSVB8hEyC4iNkEhQfIZOg+AiZBMVHyCQoPkImQfERMgmK713zuBw/fVy+3X1dfv38unyXn+G+W/C8PN19XL7fPwdrf4+XQ8r38Biu3Zq3iU8alpp3fAjW3oAU6NpN2OPX/WcdymDteugAWj3zoGRxfFl+wPO/xsNB65x+Spzb1FwE/3l5+tk8lzMMReHrcjHdCwb85lk+LC+4H/ZcozZvEp8Mx/GwVbTLeL/iQ6TpwZD+9wzEN4VTRP1Pik+KKG+KrWKW5O71C9m+XfOAl+ffwIcXX/nVyMhC74tWbeQNmoY2xyviGcXpKF8A2XM8ePHVr1AibET35vR1ie1LY9N55fnxwfLSn7Z/fY6+bR1i1vObne33NWjjV5vgq2Br4wEd78OcsW/6zGoT9Xf1oUD+pc5H8I3P4/qP8uz9mn09+12KlfZsz6PanMvl4oNfE6Sx4UDWpEtSOcFSkDwoTbLFn1yrP7WvvsE+D1NNHAqd/VrR7T6O48i+bXjKuVG81jC3D4FGyr3E3bUvcep50Mcp11AHrG0bE86CtfK10KEyv3kN7bGmgPOB+1xMObPZ96KI+osxXM6lfmazntPXBeOP82z96pzk2rmZ3Z9H9X0eF4tPEqqJyiFqoZHmsAmxw3ujDtHGnl5kpUDYaHwegHEcbljw/vQcsMnrni37dk3vu8HAaxgS8xcC+YzriYxir/e9Dy9YZ9fW09mMBna01uYPe5o892dokCfUtbUd+9rKZZ8LxadFr5/ezE7RyrM1EV1zPqLCSXFxT42zJt7td00fx0Hcl0KofgL7gY/VBpuyZd/WB+8H17kesfikDi4GnD8cnjxw3kbjaX/Xc40GMJqDdZ9+QfyzbmCH/UUg//blg/0O6282GCOoa/Xb1+u0eTyfi8TXDao96wayTWS9b32g/ZpsOwS+qLrvMflsmtn6HcRxNHbrPTQI94eU8z2kRlZfW/btGt4PrtvhM/JQxEMZC0d9tr3pY0d7jWbIh6A/tNnub2i/Jb6N+u/mCX7bep06j+dygfjaZApt8zO6txYnJ6iH9aLQpPbEl20w2RwT/NszuN+K48FY/tyRjy7/gpxdzoTrY3scBAHvR9dBTcS3q//++e2POPWcpZbmN+dhNnktHrK8z+qZ+6s+csxaZ4ll9hIfr5tcwjiQ/6b4ovpv5Tnwi7UsOan9qec9jfPFBwLya3qwNWmhJCf/jkhr2Fzbr89TolDEVXyWoBVUvnK9DxezacZWnGpjlMYI+S+0QVMzoXgL2Udfn9gemt/dj64TZSDUnw2i7tFnKb68/euaj98OYiadCevu/eEZW/y+kX3/XGu03V9DbfLzHfGF9R/mOfa71uuwPKUz2vnH55U5i3Qx5uI/uJwGJBeuk1vykl6CdWjJdCi+d8X5b2dyPa4sPvLPYL96jX7lJjeH4iNkEhQfIZOg+AiZBMVHyCQoPkImQfERMgmKj5BJUHyETILiI2QSFB8hk6D4CJkExUfIFF6XP+K2Y2vojQRmAAAAAElFTkSuQmCC" />
+                </ui:ImageFound.Image>
+                <ui:ImageFound.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='BMG Consig' /&gt;&lt;webctrl id='div-error' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:ImageFound.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ImageFound>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID1" Condition="[expirou=TRUE or invalido =True]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">70.5,456.5</av:Point>
+                      <av:Size x:Key="ShapeSize">79,87</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">70.5,500 50,500 50,605.5 350,605.5 350,575.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">250,524.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">450,550 480,550 480,390 200,390</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ReLogin workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ReLogin.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID0</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+  </Flowchart>
+</Activity>
