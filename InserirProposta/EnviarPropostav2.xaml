@@ -1,0 +1,294 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EnviarProposta" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="804,2896" sap2010:WorkflowViewState.IdRef="EnviarProposta_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EnviarProposta" sap:VirtualizedContainerService.HintSize="764,2816" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="TelaContrato" />
+      <Variable x:TypeArguments="x:Boolean" Name="FecharTela" />
+      <Variable x:TypeArguments="x:Boolean" Name="Scroll" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ImageFound DisplayName="Image Exists 'chrome.exe Consig'" Found="[FecharTela]" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <If Condition="[FecharTela = true]" sap:VirtualizedContainerService.HintSize="726,254" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+          <ui:ClickImage.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:ClickImage.CursorPosition>
+          <ui:ClickImage.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAdCAYAAACuc5z4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACKSURBVEhL7ZFLCoAwDAW9qCB6AUXpXfytRDxm5FEbK9SSUrrLrNoEhuSlokKomFExo2ImKB4mQ8u2P78X1NCTEBQf50V1033keKOGnoTfKObViiB0UtSkRDO28jZZCqJiN6mbPIVfsb++H4uU6PH89Z0863j9aIKZooaehGjGOaiYUTGjYqaQmOgG6qK2E+3bcsQAAAAASUVORK5CYII=" />
+          </ui:ClickImage.Image>
+          <ui:ClickImage.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:ClickImage.Target>
+        </ui:ClickImage>
+      </If.Then>
+    </If>
+    <ui:ImageFound DisplayName="Image Exists 'chrome.exe Consig'" Found="[Scroll]" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="ImageFound_3">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAABBCAYAAACjBeb/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFXSURBVGhD7di9SgNBFIbh9F6BNt6AEnstNNbRxQvQVhErtbMQi0SCWKog4j1YiKKdYKWQ3p9ShMTEvYE9zhl0N8WKwS86Z+FbeItdhuFhZrbYLcmAriRJ0uI4hhutDPl5CfxtBKIRiEYgGoFoBKIRiEYgGoFoBKIRiPbvwCiKvi1vfJAV7BenBdvifnBa0DP4E07jS4JGIJp54Fh12M9rFhitTvt5zQIvbs78vCXdayuNV0dkYW1Wrm/PPU6vga3gX12mVrCyNCH7pzvy2nr55Dng+9uzWOm+eSW1g3WZX5lKkaaAX+0ebcreybZdoK6kbrdZoKZnkkCkFNh1NxYrELDtHhisOMC8A2qhIgGf3AN7FQfYbT+6Q2kvAtFSYKf1IBYjEI0vCRqBaKaBd83L7Ksub0Do6ocb2Xdx3oBQ6copbm55MvuzoHttpZnFsjSOt3r+zYh8AJP4MnlOBPiMAAAAAElFTkSuQmCC" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <If Condition="[scroll= true]" sap:VirtualizedContainerService.HintSize="726,2138" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="585,1990" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:Boolean" Name="Desmarcar" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="547,106" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY/j48eN/YvGoYmQMVhwQEIATYyjGpQFZIQijOAOfQhDGcDMuhSBMugeJxYNC8cf/ALJqgk9Peqb7AAAAAElFTkSuQmCC" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="547,106" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY/j48eN/YvGoYmQMVhwQEIATYyjGpQFZIQijOAOfQhDGcDMuhSBMugeJxYNC8cf/ALJqgk9Peqb7AAAAAElFTkSuQmCC" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+          <ui:ImageFound DisplayName="Image Exists 'chrome.exe Consig'" Found="[Desmarcar]" sap:VirtualizedContainerService.HintSize="547,106" sap2010:WorkflowViewState.IdRef="ImageFound_4">
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:ImageFound.Target>
+          </ui:ImageFound>
+          <If Condition="[Desmarcar=true]" sap:VirtualizedContainerService.HintSize="547,1460" sap2010:WorkflowViewState.IdRef="If_3">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="406,1312" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap:VirtualizedContainerService.HintSize="368,198" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Check ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INPUT  ctl00_ctl00_gera...'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="Check_1">
+                    <ui:Check.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6d16c7a8d7d8939bb533f8363d8d4924" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;&lt;webctrl id='ctl00_ctl00_geral_pagina_chkDesmarcaCstIdContrato' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:Check.Target>
+                  </ui:Check>
+                </Sequence>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="ClickImage_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY/j48eN/YvGoYmQMVhwQEIATYyjGpQFZIQijOAOfQhDGcDMuhSBMugeJxYNC8cf/ALJqgk9Peqb7AAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="ClickImage_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY/j48eN/YvGoYmQMVhwQEIATYyjGpQFZIQijOAOfQhDGcDMuhSBMugeJxYNC8cf/ALJqgk9Peqb7AAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="ClickImage_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY/j48eN/YvGoYmQMVhwQEIATYyjGpQFZIQijOAOfQhDGcDMuhSBMugeJxYNC8cf/ALJqgk9Peqb7AAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="ClickImage_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA3SURBVChTY/j48eN/YvGoYmQMVhwQEIATYyjGpQFZIQijOAOfQhDGcDMuhSBMugeJxYNC8cf/ALJqgk9Peqb7AAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:Check ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INPUT  ctl00_ctl00_gera...'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="Check_2">
+                  <ui:Check.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5a46d04f827e67ea5b1c93af7bc38c98" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;&lt;webctrl id='ctl00_ctl00_geral_pagina_chkCstIdContrato_35' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:Check.Target>
+                </ui:Check>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="ClickImage_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAATCAYAAAAnMdWSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKhSURBVFhH7ZZNbxJBGMerHmpSD34H/QBerEdvmnppT9YPoAeJiT2TkjQxgcQLiQnFa2uioYHYgydvcKCF8FKWl22QpdaWwgqUXoovUP/O7Mzi7jLbEmyTKt3kx87M8zyz+2NnB8YOmmWMKqMt3yIfo8qIyzdI4wxRgjOYfHLdwgwCBRIPu7S+O0xz4wg4Sczph8Jro16eZ5jvNDlWfr+xi2KxhM3NooYsF7FXrQlz7WDyg0iY5QevGx7bDa/V3NGEt7/soNPp4ugIqNZUbWy3siesEVEOMYkVWRCPsCfvidB+HCtcvszHdWh8zUvbLni0M6+R/XAY8hyhOJuXjzu8Lhanc1qvTbCVz+dlbG1tw3qo6lfkcgVhjYih5AV1TF7P/ZOv91mc5+tfio20DpFXSKMfScrh8LDNlc0Hla/Xa8I6K0yC3XgP7yqLR+a1vidCc2NcfpHcsF5HZdg8TG4ea3zeHvKi4enzfD7mCMXMuRZs5dMbGbTb37mu+chm8/jWqgrrrFglTPyV/Co8BmFT/qDyrUaJvPz9ZCRJsOw72rKn8m+TdOMT1xpRgtPkpqbJxiWIh5m8O0z763zD85ENr78uyuWjwlpLfsHH5IPrLNcGW3lVVbWlT7+AHz876HZ/oVKpQlXyWAimMPZoCXPLMWGtkTOTNwm+h5u0T02eUiU/a5KURSYjaRQLOSx/iOPKfTcu3XPj8tRLPHAGhLU6w8rrAjROJfrkCWyM5zjpdfhcg8rv1z/hZBQ06597/ccv3uHq7WcYn3yO8TtzuDXrMeT+Owwo34//zUdcuzmLiRsPMUHOtfqBMO88YyNPds9ymfyjk8myl5BOp5FMJpFIJDRSqRR5/yvwvV7C3amncC68Esxx/jn2nf/fuZAfTUr4DcqTWiB9SD6PAAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Consig'" sap:VirtualizedContainerService.HintSize="368,106" sap2010:WorkflowViewState.IdRef="ClickImage_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAATCAYAAADMBm6RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHVSURBVFhH7ZXNdcIwDMczQqfpGrBELxkhL1zJMSdgBnjhwQrkwNcAcChhgdKPDVQ5khLLMc1ry4lw+INl2ZJ+MjbB1/sZuqTgEz+6pA4CX3BwWcLw5QmeK/VhejDzt9AeptEA1l5fu9bpLWsxwIcJhAYyXVaTRdYvwYer5obfap2aBv4NmOq4MfCGC9rgcfsuuYjWsaIJnMWXD8q5ZM6NQ4Xzfek7z6lxpD7MjnuYRWb/ABLzXc45saUWjitKcs53rPOo+UY+P1OQGCeeruuwpZuyBLVHCmPbbaC2GZhBq/3SQIHhWARgrWW/bij7lc+p0ZIFXFyRvZnm6kRo5zGOTaJd04c2AccIbOwdn/AYAckvUqfMudxYrq1qO46tXxjV4lM7MAeyg/iAk9zjQ7sNmNZLDbq5P8cy0utV01A+8IAelRgflRNeap8W9IKni2quyHq4p4ePCdorAh6uPD60dfwtvthoRyMovLbO5cZybV9tpbgmvZaEr/SI740LVEPoop0k/wLWfsl7DVhqDbNt0+/Uce0g8X/YDBjCkmwUUQCW3dEW4LrbZk0TuGp4qR6Ett/yCaS73j7BqmEsl8Eo+Hh7hS7pAXzv4jvcHT2A710dAz7BNyGwHCoyS6Z/AAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Consig Online - Copyright Phi Soluções Tecnológicas' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+              </Sequence>
+            </If.Then>
+          </If>
+        </Sequence>
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>
