@@ -1,0 +1,199 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="567.333333333333,4054" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upap="clr-namespace:UiPath.PDF.Activities.PDF;assembly=UiPath.PDF.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="24">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="474,3989.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="saidatxt" />
+      <Variable x:TypeArguments="x:String" Name="saidatxt2" />
+      <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="textoEncontrado" />
+      <Variable x:TypeArguments="x:String" Name="texto" />
+      <Variable x:TypeArguments="ui:Image" Name="imagemRecebida" />
+      <Variable x:TypeArguments="x:String" Name="arquivolido" />
+      <Variable x:TypeArguments="x:String" Name="cnpj_presta" />
+      <Variable x:TypeArguments="x:String" Name="razao_presta" />
+      <Variable x:TypeArguments="x:String" Name="uf_presta" />
+      <Variable x:TypeArguments="x:String" Name="arquivo_txt">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\nicole\OneDrive - Atos\Área de Trabalho\extractpdf1_NICOLE\extractpdf1\saidaservico1.txt</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="arquivo_jpg">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\nicole\OneDrive - Atos\Área de Trabalho\extractpdf1_NICOLE\extractpdf1\saidaservico1.jpg</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="saida" />
+      <Variable x:TypeArguments="x:String" Name="caminho">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\nicole\OneDrive - Atos\Área de Trabalho\extractpdf1_NICOLE\extractpdf1\</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="ArquivoOrigem" />
+      <Variable x:TypeArguments="x:String" Name="CaminhoCompleto">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\nicole\OneDrive - Atos\Área de Trabalho\extractpdf1_NICOLE\ARQUIVOS</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="432,616.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[directory.Getfiles(caminho,&quot;*.pdf&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,478" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[item]" TopMost="True" />
+            <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CaminhoCompleto]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[CaminhoCompleto]" TopMost="True" />
+            <upap:ExportPDFPageAsImage DisplayName="Export PDF Page As Image RJ" FileName="[CaminhoCompleto]" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ExportPDFPageAsImage_3" ImageDpi="150" OutputFileName="[arquivo_jpg]" PageNumber="1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="432,257" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="368,179" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <upap:ExportPDFPageAsImage DisplayName="Export PDF Page As Image SP" FileName="C:\Users\marcelo\Downloads\ConversaoArquivoOCR_NOVO-20200105T113822Z-001\ConversaoArquivoOCR_NOVO\entrada\Servico\SP_1002300023448_ETC5015_17923296000115_NF_061119_.PDF" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="ExportPDFPageAsImage_2" ImageDpi="150" OutputFileName="[arquivo_jpg]" PageNumber="1" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:LoadImage DisplayName="Load Image" FileName="[arquivo_jpg]" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="LoadImage_2" Image="[imagemRecebida]" />
+    <ui:GoogleCloudOCR FilterRegion="{x:Null}" Output="{x:Null}" ApiKey="AIzaSyAH2sQvnj70u1--Bo6FDWh8BnKngKaRjNc" ComputeSkewAngle="False" DisplayName="Google Cloud Vision OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="432,22" sap2010:WorkflowViewState.IdRef="GoogleCloudOCR_3" Image="[imagemRecebida]" Language="English" Profile="None" ResizeToApiLimits="False" Result="[textoEncontrado]" Scale="1" Text="[texto]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[texto]" />
+    <ui:WriteTextFile DisplayName="Write Text File" FileName="[arquivo_txt]" sap:VirtualizedContainerService.HintSize="432,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_4" Text="[texto]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="432,302" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="368,224" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadTextFile Content="[arquivolido]" DisplayName="Read Text File" FileName="[arquivo_txt]" sap:VirtualizedContainerService.HintSize="330,132" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="        Dim DT_Emiss As String&#xA;        Dim Cnpj_Toma As String&#xA;        Dim Cod_Serv As String&#xA;        Dim Vl_Serv As String&#xA;        Dim Vl_Tot_Deducoes As String&#xA;        Dim Vl_Bas_Calc As String&#xA;        Dim Per_Aliquota As String&#xA;        Dim Vl_ISS As String&#xA;        Dim Vl_Credito As String&#xA;&#xA;&#x9;&#x9;&#xA;        Dim TextLine As String&#xA;        Dim Bloco As String&#xA;        Dim Cidade As String&#xA;        TextLine = &quot;&quot;&#xA;        Bloco = &quot;&quot;&#xA;        Cidade = &quot;&quot;&#xA;        Dim x As Integer&#xA;        Dim i As Integer&#xA;        x = 0&#xA;        If System.IO.File.Exists(FILE_NAME) = True Then&#xA;            Dim objReader As New System.IO.StreamReader(FILE_NAME)&#xA;            Do While objReader.Peek() &lt;&gt; -1&#xA;                TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;&#xA;                If (TextLine.ToUpper.IndexOf(&quot;NOTA CARIOCA&quot;, 0) &gt; 0 And Cidade = &quot;&quot;) Then&#xA;                    Cidade = &quot;RJ&quot;&#xA;                End If&#xA;&#xA;                If (TextLine.ToUpper.IndexOf(&quot;Nota Fiscal Eletrônica de Serviços - São Paulo&quot;, 0) &gt; 0 And Cidade = &quot;&quot;) Then&#xA;                    Cidade = &quot;SP&quot;&#xA;                End If&#xA;&#xA;                If (Cidade = &quot;RJ&quot;) Then&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;DATA E HORA DE EMIS&quot;, 0) &gt; 0) Then&#xA;                        TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;                        DT_Emiss = TextLine.Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;PRESTADOR DE SERVI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;PRESTADOR&quot;&#xA;                    End If&#xA;                    If Bloco = &quot;PRESTADOR&quot; Then&#xA;                        x = TextLine.IndexOf(&quot;CPF/CNPJ:&quot;, 0)&#xA;                        If (x &gt; 0) Then Cnpj_Presta = TextLine.Substring(x + 9).Trim&#xA;&#xA;                        x = TextLine.IndexOf(&quot;Social:&quot;, 0)&#xA;                        If (x &gt; 0) Then Razao_Presta = TextLine.Substring(x + 7).Trim&#xA;&#xA;                        x = TextLine.IndexOf(&quot;UF:&quot;, 0)&#xA;                        If (x &gt; 0) Then UF_Presta = TextLine.Substring(x + 3).Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;TOMADOR DE SERVI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;TOMADOR&quot;&#xA;                    End If&#xA;&#xA;                    If Bloco = &quot;TOMADOR&quot; Then&#xA;                        x = TextLine.IndexOf(&quot;CPF/CNPJ:&quot;, 0)&#xA;                        If (x &gt; 0) Then Cnpj_Toma = TextLine.Substring(x + 9).Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;INTERMEDI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;INTERMEDIARIO&quot;&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;VALOR DA NOTA =&quot;, 0) &gt; 0) Then&#xA;                        x = TextLine.IndexOf(&quot;R$&quot;, 0)&#xA;                        If (x &gt; 0) Then Vl_Serv = TextLine.Substring(x + 3).Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;SERVIÇO PRESTADO&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;COD_SERV&quot;&#xA;                        TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;                        Cod_Serv = TextLine.Substring(0, 9).Trim&#xA;                        TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;                    End If&#xA;&#xA;                    If Bloco = &quot;COD_SERV&quot; Then&#xA;                        If (TextLine.Substring(1, 1) &gt;= &quot;0&quot; And TextLine.Substring(1, 1) &lt;= &quot;9&quot;) Then&#xA;                            i += 1&#xA;                            TextLine = TextLine.Replace(&quot;%&quot;, &quot; &quot;)&#xA;                            TextLine = TextLine.Replace(vbCrLf, &quot; &quot;)&#xA;                            If (i = 2) Then Vl_Tot_Deducoes = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 4) Then Vl_Bas_Calc = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 5) Then Per_Aliquota = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 6) Then Vl_ISS = TextLine.Trim 'Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 1) Then Vl_Credito = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                        End If&#xA;                    End If&#xA;                End If&#xA;&#xA;&#xA;                If (Cidade = &quot;SP&quot;) Then&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;DATA E HORA DE EMIS&quot;, 0) &gt; 0) Then&#xA;                        TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;                        DT_Emiss = TextLine.Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;PRESTADOR DE SERVI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;PRESTADOR&quot;&#xA;                    End If&#xA;                    If Bloco = &quot;PRESTADOR&quot; Then&#xA;                        x = TextLine.IndexOf(&quot;CPF/CNPJ:&quot;, 0)&#xA;                        If (x &gt; 0) Then Cnpj_Presta = TextLine.Substring(x + 9).Trim&#xA;&#xA;                        x = TextLine.IndexOf(&quot;Social:&quot;, 0)&#xA;                        If (x &gt; 0) Then Razao_Presta = TextLine.Substring(x + 7).Trim&#xA;&#xA;                        x = TextLine.IndexOf(&quot;UF:&quot;, 0)&#xA;                        If (x &gt; 0) Then UF_Presta = TextLine.Substring(x + 3).Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;TOMADOR DE SERVI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;TOMADOR&quot;&#xA;                    End If&#xA;&#xA;                    If Bloco = &quot;TOMADOR&quot; Then&#xA;                        x = TextLine.IndexOf(&quot;CPF/CNPJ:&quot;, 0)&#xA;                        If (x &gt; 0) Then Cnpj_Toma = TextLine.Substring(x + 9).Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;INTERMEDI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;INTERMEDIARIO&quot;&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;VALOR TOTAL DO SERV&quot;, 0) &gt; 0) Then&#xA;                        x = TextLine.IndexOf(&quot;R$&quot;, 0)&#xA;                        If (x &gt; 0) Then Vl_Serv = TextLine.Substring(x + 3).Trim&#xA;                    End If&#xA;&#xA;                    If (TextLine.ToUpper.IndexOf(&quot;DIGO DO SERVI&quot;, 0) &gt; 0) Then&#xA;                        Bloco = &quot;COD_SERV&quot;&#xA;                        TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;                        Cod_Serv = TextLine.Substring(0, 6).Trim&#xA;                        TextLine = &quot; &quot; + objReader.ReadLine() &amp; vbNewLine&#xA;                    End If&#xA;&#xA;                    If Bloco = &quot;COD_SERV&quot; Then&#xA;                        If (TextLine.Substring(1, 1) &gt;= &quot;0&quot; And TextLine.Substring(1, 1) &lt;= &quot;9&quot;) Then&#xA;                            i += 1&#xA;                            TextLine = TextLine.Replace(&quot;%&quot;, &quot; &quot;)&#xA;                            TextLine = TextLine.Replace(vbCrLf, &quot; &quot;)&#xA;                            If (i = 3) Then Vl_Tot_Deducoes = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 4) Then Vl_Bas_Calc = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 1) Then Per_Aliquota = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 2) Then Vl_ISS = TextLine.Trim 'Convert.ToDouble(TextLine).ToString&#xA;                            If (i = 5) Then Vl_Credito = TextLine.Trim ' Convert.ToDouble(TextLine).ToString&#xA;                        End If&#xA;                    End If&#xA;                End If&#xA;&#xA;            Loop&#xA;        Else&#xA;            'MsgBox(&quot;Este arquivo não existe&quot;)&#xA;&#xA;        End If&#xA;&#xA;&#xA;        s = &quot;&quot;&#xA;        s = &quot;Cidade NFE = &quot; + Cidade + vbCrLf _&#xA;            + &quot;Cnpj_Presta = &quot; + Cnpj_Presta + vbCrLf _&#xA;            + &quot;Razao_Presta = &quot; + Razao_Presta + vbCrLf _&#xA;            + &quot;UF_Presta = &quot; + UF_Presta + vbCrLf _&#xA;            + &quot;DT_Emiss = &quot; + DT_Emiss + vbCrLf _&#xA;            + &quot;Cnpj_Toma = &quot; + Cnpj_Toma + vbCrLf _&#xA;            + &quot;Cod_Serv = &quot; + Cod_Serv + vbCrLf _&#xA;            + &quot;Vl_Serv = &quot; + Vl_Serv + vbCrLf _&#xA;            + &quot;Vl_Tot_Deducoes = &quot; + Vl_Tot_Deducoes + vbCrLf _&#xA;            + &quot;Vl_Bas_Calc = &quot; + Vl_Bas_Calc + vbCrLf _&#xA;            + &quot;Per_Aliquota = &quot; + Per_Aliquota + vbCrLf _&#xA;            + &quot;Vl_ISS = &quot; + Vl_ISS + vbCrLf _&#xA;            + &quot;Vl_Credito = &quot; + Vl_Credito + vbCrLf&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="432,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="FILE_NAME">[arquivo_txt]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Cnpj_Presta">[cnpj_presta]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Razao_Presta">[razao_presta]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="UF_Presta">[uf_presta]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="s">[saida]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[saida]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;cnpj_presta=&quot; + cnpj_presta + &quot; razao_presta=&quot; + razao_presta + &quot; uf_presta=&quot; + uf_presta]" />
+    <ui:ReadPDFText DisplayName="Private: Read PDF Text" FileName="C:\Users\marcelo\Downloads\ConversaoArquivoOCR_NOVO-20200105T113822Z-001\ConversaoArquivoOCR_NOVO\entrada\Servico\1002300023448_ETC5015_17923296000115_NF_061119_.PDF" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[saidatxt]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[saidatxt]" />
+    <ui:LoadImage DisplayName="Load Image" FileName="C:\Users\marcelo\Downloads\ConversaoArquivoOCR_NOVO-20200105T113822Z-001\ConversaoArquivoOCR_NOVO\saida2.jpg" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[imagemRecebida]" />
+    <ui:GoogleCloudOCR FilterRegion="{x:Null}" Output="{x:Null}" ApiKey="AIzaSyAH2sQvnj70u1--Bo6FDWh8BnKngKaRjNc" ComputeSkewAngle="False" DisplayName="Google Cloud Vision OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="432,22" sap2010:WorkflowViewState.IdRef="GoogleCloudOCR_4" Image="[imagemRecebida]" Language="English" Profile="None" ResizeToApiLimits="False" Result="[textoEncontrado]" Scale="1" Text="[texto]" />
+    <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Read PDF With OCR" FileName="C:\Users\marcelo\Downloads\ConversaoArquivoOCR_NOVO-20200105T113822Z-001\ConversaoArquivoOCR_NOVO\entrada\1002800038080_QNL0031_02581638000199_NF_061119_(1).pdf" sap:VirtualizedContainerService.HintSize="432,131" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_2" ImageDpi="150" Range="All" Text="[saidatxt]">
+      <ui:ReadPDFWithOCR.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:GoogleCloudOCR FilterRegion="{x:Null}" Output="{x:Null}" ApiKey="AIzaSyAH2sQvnj70u1--Bo6FDWh8BnKngKaRjNc" ComputeSkewAngle="False" DisplayName="Google Cloud Vision OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="GoogleCloudOCR_2" Image="[imagemRecebida]" Language="English" Profile="None" ResizeToApiLimits="False" Result="[textoEncontrado]" Scale="1" Text="[texto]" />
+        </ActivityFunc>
+      </ui:ReadPDFWithOCR.OCREngine>
+    </ui:ReadPDFWithOCR>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[texto]" />
+    <ui:WriteTextFile DisplayName="Write Text File" FileName="C:\ESSOR\saidatxt3.txt" sap:VirtualizedContainerService.HintSize="432,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[texto]" />
+    <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Read PDF With OCR" FileName="[ArquivoOrigem]" sap:VirtualizedContainerService.HintSize="432,131" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_1" ImageDpi="150" Range="All" Text="[saidatxt]">
+      <ui:ReadPDFWithOCR.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Text="[saidatxt2]" />
+        </ActivityFunc>
+      </ui:ReadPDFWithOCR.OCREngine>
+    </ui:ReadPDFWithOCR>
+    <ui:WriteTextFile DisplayName="Write Text File" FileName="C:\ESSOR\saidatxt2.txt" sap:VirtualizedContainerService.HintSize="432,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[saidatxt2]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[saidatxt2]" />
+    <ui:WriteTextFile DisplayName="Write Text File" FileName="C:\ESSOR\saidatxt.txt" sap:VirtualizedContainerService.HintSize="432,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[saidatxt]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="432,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[saidatxt]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="432,257" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="368,179" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <upap:ExportPDFPageAsImage PageNumber="{x:Null}" DisplayName="Export PDF Page As Image" FileName="C:\Users\marcelo\Downloads\ConversaoArquivoOCR_NOVO-20200105T113822Z-001\ConversaoArquivoOCR_NOVO\1002800038080_QNL0031_02581638000199_NF_061119_(1).pdf" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="ExportPDFPageAsImage_1" ImageDpi="150" OutputFileName="C:\Users\marcelo\Downloads\ConversaoArquivoOCR_NOVO-20200105T113822Z-001\SAIDA1.JPG" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>
